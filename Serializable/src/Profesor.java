@@ -1,20 +1,24 @@
 import java.io.Serializable;
 
-/**
- * Clase Person que implementa la interfaz Serializable
- * Esta clase demuestra cómo hacer que un objeto sea serializable en Java
- */
-public class Profesor extends Person implements Serializable, Deberes {
-    // SerialVersionUID para control de versiones
+public class Profesor extends Person implements Serializable {
     private static final long serialVersionUID = 1L;
+    private String materia;
     
-    public Profesor(String name) {
+    public Profesor(String name, String materia) {
        super(name);
+       this.materia = materia;
     }
     
-
-
-        @Override
+    // Getter y setter para carrera
+    public String getCarrera() {
+        return materia;
+    }
+    
+    public void setCarrera(String carrera) {
+        this.materia = materia;
+    }
+    
+    @Override
     public String deberes() {
         return "Deberes de Profesor:\n" +
                "1. Preparar las clases adecuadamente\n" +
@@ -23,13 +27,11 @@ public class Profesor extends Person implements Serializable, Deberes {
                "4. Guiar y orientar a los estudiantes";
     }
     
-    /**
-     * Método toString para mostrar la información de la persona
-     */
     @Override
     public String toString() {
         return "Profesor{" +
-                "name='" + getName() + '\'' +
+                "nombre='" + getName() + '\'' +
+                ", materia='" + materia + '\'' +
                 '}' + deberes();
     }
 }
