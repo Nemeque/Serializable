@@ -1,6 +1,4 @@
-import java.io.Serializable;
-
-public class Estudiante extends Person implements Serializable, interfaz {
+public class Estudiante extends Person {
     private static final long serialVersionUID = 1L;
     private String semestre;
     
@@ -9,7 +7,6 @@ public class Estudiante extends Person implements Serializable, interfaz {
        this.semestre = semestre;
     }
     
-    // Getter y setter para carrera
     public String getSemestre() {
         return semestre;
     }

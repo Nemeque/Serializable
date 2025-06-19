@@ -1,6 +1,4 @@
-import java.io.Serializable;
-
-public class Profesor extends Person implements Serializable {
+public class Profesor extends Person {
     private static final long serialVersionUID = 1L;
     private String materia;
     
@@ -9,12 +7,11 @@ public class Profesor extends Person implements Serializable {
        this.materia = materia;
     }
     
-    // Getter y setter para carrera
-    public String getCarrera() {
+    public String getMateria() {
         return materia;
     }
     
-    public void setCarrera(String carrera) {
+    public void setMateria(String materia) {
         this.materia = materia;
     }
     
