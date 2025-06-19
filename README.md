@@ -1,78 +1,23 @@
-# Proyecto Java: Serialización y Manejo de Archivos
+Interfaz que solo registra nombre y deberes de todas las clases
 
-Este proyecto demuestra la implementación de la interfaz `Serializable` en Java y el manejo de archivos utilizando `BufferedReader` y `BufferedWriter`.
+![image](https://github.com/user-attachments/assets/9c4fc860-1e76-47c0-9d18-81875331cc19)
 
-## Estructura del Proyecto
+person se usa como base para procesar el nombre y la interfaz ademas de usarse como clase externa a profesor y estudiante
 
-El proyecto consta de dos archivos principales:
+![image](https://github.com/user-attachments/assets/7acf0f07-f30e-44bc-a759-f06edaac4179)
 
-- `Person.java`: Clase que implementa la interfaz Serializable
-- `SerializationAndFileHandler.java`: Clase principal que demuestra las operaciones de serialización y manejo de archivos
+Estudiante que tiene como caracteristica propia el semestre cursado
 
-## Componentes Principales
+![image](https://github.com/user-attachments/assets/e7f417fa-3329-446e-bf5d-42e42f01784e)
 
-### 1. Clase Person
-- Implementa la interfaz `Serializable`
-- Contiene atributos básicos: nombre, edad y dirección
-- Incluye un `serialVersionUID` para control de versiones
-- Proporciona getters y setters para todos los atributos
-- Implementa el método `toString()` para mostrar la información del objeto
+Profesor que tiene su asigntatura
 
-### 2. Clase SerializationAndFileHandler
-Implementa cuatro operaciones principales:
+![image](https://github.com/user-attachments/assets/cc80a42c-2ee1-4ede-88b8-0c39a2e550e2)
 
-#### a) Serialización de Objetos
-- Convierte objetos `Person` en un formato binario
-- Guarda los objetos en un archivo `.ser`
-- Utiliza `ObjectOutputStream` para la serialización
+Se crea por clase el listado y se agrega a los archivos
 
-#### b) Deserialización de Objetos
-- Lee objetos serializados desde el archivo
-- Convierte los datos binarios de vuelta a objetos `Person`
-- Utiliza `ObjectInputStream` para la deserialización
+![image](https://github.com/user-attachments/assets/1b9ae211-995f-4068-adfc-b23f5b0a4128)
 
-#### c) Escritura en Archivo de Texto
-- Escribe la información de las personas en un archivo de texto
-- Utiliza `BufferedWriter` para una escritura eficiente
-- Cada persona se escribe en una línea separada
+Y finalmente quedan guardados
 
-#### d) Lectura de Archivo de Texto
-- Lee el contenido del archivo de texto
-- Utiliza `BufferedReader` para una lectura eficiente
-- Muestra el contenido línea por línea
-
-## Archivos Generados
-
-El programa genera dos archivos durante su ejecución:
-
-1. `personas.ser`: Archivo binario que contiene los objetos serializados
-2. `personas.txt`: Archivo de texto que contiene la información de las personas
-
-## Compilación y Ejecución
-
-Para compilar el proyecto:
-```bash
-javac Person.java SerializationAndFileHandler.java
-```
-
-Para ejecutar el programa:
-```bash
-java SerializationAndFileHandler
-```
-
-## Manejo de Errores
-
-El programa incluye manejo de excepciones para:
-- `IOException`: Errores de entrada/salida
-- `ClassNotFoundException`: Errores durante la deserialización
-
-## Notas Importantes
-
-1. La interfaz `Serializable` no requiere implementación de métodos, solo la declaración de la interfaz.
-2. El `serialVersionUID` es importante para mantener la compatibilidad entre versiones.
-3. Se utilizan bloques try-with-resources para garantizar el cierre adecuado de los recursos.
-4. El programa demuestra buenas prácticas de programación como:
-   - Documentación con JavaDoc
-   - Manejo de recursos
-   - Separación de responsabilidades
-   - Código limpio y mantenible 
+![image](https://github.com/user-attachments/assets/d3436c9d-b706-4a56-9a07-42ce007d5f21)
